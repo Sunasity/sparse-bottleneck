@@ -2,47 +2,49 @@ import torch
 import torch.nn as nn
 
 class SparseParam(object):
-    def __init__(self):
-        self.scheme = 'naive'
-        self.sparse_part = 'pruning_fc'
-        self.sparse_option = {'pruning_fc': nn.Linear, 'pruning_conv': nn.Conv2d}
-        # higher ratio, higher sparsity
-        self.expected_ratio = 0.9
-        self.pruned_idx = [0]
+    def __init__(self, conf):
+        self.scheme = conf['scheme']
+        self.sparse_part = conf['sparse_part']
+        self.sparse_option = {'fc': nn.Linear, 'conv': nn.Conv2d}
+        # higher ratio, higher sparsity. 
+        self.expected_ratio = [float(x) for x in conf['expected_ratio'].split(',')]
+        # the idx of layers to be pruned. 
+        self.pruned_idx = [int(x) for x in conf['pruned_idx'].split(',')]
         # whether all conv layers in the block uses the same ratio. only active for bottleneck like models
         # such as ResNet
-        self.apply_bolck = False
+        self.apply_bolck = bool(conf['apply_block'])
         self.block_dict = {}
     def GenBlockDict(self, model):
-        self.block_dict = {1: model.module.layer1, 2: model.module.layer2, 3: model.module.layer3, 4: model.module.layer4}
+        pass
 
-sparse_param = SparseParam()
+
 
 class PruningWeight(object):
-    def __init__(self):
+    def __init__(self, sparse_param=None):
         self.MaskList = []
         self.threshold = []
+        self.sparse_param = sparse_param
 
     def Init(self, model):
         _idx = 0
-        if not sparse_param.apply_bolck:
+        if not self.sparse_param.apply_bolck:
             for m in model.modules():            
-                if isinstance(m, sparse_param.sparse_option[sparse_param.sparse_part]):                
-                    if _idx in sparse_param.pruned_idx:
+                if isinstance(m, self.sparse_param.sparse_option[self.sparse_param.sparse_part]):                
+                    if _idx in self.sparse_param.pruned_idx:
                         with torch.no_grad():
                             m.weight.copy_(self._SetUpPruning(m.weight))
                         _idx += 1
         else:
-            sparse_param.GenBlockDict(model)
-            for _idx_ in sparse_param.pruned_idx:
-                for _blocks in sparse_param.block_dict[_idx_]:
+            self.sparse_param.GenBlockDict(model)
+            for _idx_ in self.sparse_param.pruned_idx:
+                for _blocks in self.sparse_param.block_dict[_idx_]:
                     for m in _blocks.modules():
                         if isinstance(m, nn.Conv2d):
                             with torch.no_grad():
                                 m.weight.copy_(self._SetUpPruning(m.weight))
 
     def _SetUpPruning(self, weight):
-        _threshold = self._FindMidValue(weight, sparse_param.expected_ratio)
+        _threshold = self._FindMidValue(weight, self.sparse_param.expected_ratio)
         sparse_weight, _Mask = self._InitMask(weight, _threshold)
         self.threshold.append(_threshold)
         self.MaskList.append(_Mask)
@@ -62,16 +64,16 @@ class PruningWeight(object):
 
     def RecoverSparse(self, model):
         _idx = 0
-        if not sparse_param.apply_bolck:
+        if not self.sparse_param.apply_bolck:
             for m in model.modules():
-                if isinstance(m, sparse_param.sparse_option[sparse_param.sparse_part]):
-                    if _idx in sparse_param.pruned_idx:
+                if isinstance(m, self.sparse_param.sparse_option[self.sparse_param.sparse_part]):
+                    if _idx in self.sparse_param.pruned_idx:
                         with torch.no_grad():
                             m.weight.copy_(m.weight * self.MaskList[_idx])
                         _idx += 1
         else:
-            for _idx_ in sparse_param.pruned_idx:
-                for _blocks in sparse_param.block_dict[_idx_]:
+            for _idx_ in self.sparse_param.pruned_idx:
+                for _blocks in self.sparse_param.block_dict[_idx_]:
                     for m in _blocks.modules():
                         if isinstance(m, nn.Conv2d):
                             with torch.no_grad():

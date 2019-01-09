@@ -1,0 +1,9 @@
+[SparseConfig]
+scheme=admm
+sparse_part=conv
+expected_ratio=0.37, 0.93, 0.94, 0.93, 0.93
+pruned_idx=0, 1, 2, 3, 4
+apply_block=False
+block_dict={}
+rho=1.5e-3
+update_step=20
