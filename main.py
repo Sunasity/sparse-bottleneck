@@ -67,15 +67,15 @@ parser.add_argument('--seed', default=None, type=int,
 parser.add_argument('--gpu', default=None, type=int,
                     help='GPU id to use.')
 
-parser.add_argument('--is_prune', default=True, type=bool,
+parser.add_argument('--prune', dest='prune', action='store_true',
                     help='Whether to prune model.')
 parser.add_argument('--conf', default='/home/fxsun/workplace/sparse-bottleneck/conf', type=str,
                     help='Scheme chosen for pruning. admm and naive mod are available.')
 
-                
 best_acc1 = 0
 
 def read_config(config_file):
+    print ('read conf from: ', config_file)
     config = configparser.ConfigParser()
     config.read(config_file)
     conf_dict = {}
@@ -138,11 +138,12 @@ def main_worker(gpu, ngpus_per_node, args):
     optimizer = torch.optim.SGD(model.parameters(), args.finetune_lr, 
                                             momentum=args.momentum,
                                             weight_decay=args.weight_decay)
+    
     #--------init pruning-----------------------------------     
     pruning = None
     regulier = None
     sparse_param = None                                       
-    if args.is_prune:
+    if args.prune:
         conf = read_config(args.conf)
         if conf['scheme'] == 'naive':
             #for vgg
@@ -151,14 +152,13 @@ def main_worker(gpu, ngpus_per_node, args):
                                         momentum=args.momentum,
                                         weight_decay=args.weight_decay) 
 
-        if conf['scheme'] == 'admm':
+            sparse_param = sparse.SparseParam(conf)
+            pruning = sparse.PruningWeight(sparse_param)
+            pruning.Init(model)
+        elif conf['scheme'] == 'admm':
             sparse_param = admm_sparse.ADMMParameter(conf)
             sparse_param.InitParameter(model)
             regulier = nn.MSELoss(size_average=False)
-        elif conf['scheme'] == 'naive':
-            sparse_param = sparse.SparseParam(conf)
-            pruning = sparse.PruningWeight()
-            pruning.Init(model)
     # optionally resume from a checkpoint
     if args.resume:
         if os.path.isfile(args.resume):
@@ -207,7 +207,7 @@ def main_worker(gpu, ngpus_per_node, args):
         num_workers=args.workers, pin_memory=True)
 
     if args.evaluate:
-        if args.is_prune:
+        if args.prune:
             if conf['scheme'] == 'naive':
                 pruning.RecoverSparse(model)
         validate(val_loader, model, criterion, args)
@@ -220,13 +220,28 @@ def main_worker(gpu, ngpus_per_node, args):
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch, args)
 
-        # train for one epoch
+        # check wieght dist
+        if args.prune:
+            if conf['scheme'] == 'admm':
+                print ('print weight distribution information....')
+                weight_dist = sparse_param.CheckDistribution(model)
+                for i_, wd in enumerate(weight_dist):
+                    print ('idx: %d, mean: %.4f, var: %4f' % (sparse_param.pruned_idx[i_], wd[0], wd[1])) 
+        # train for one epoch 
         sparse_param = train(train_loader, model, criterion, optimizer, epoch, args, conf, sparse_param, pruning, regulier)
 
         # evaluate on validation set
-        if args.is_prune:
+        if args.prune:
             if conf['scheme'] == 'naive':
                 pruning.RecoverSparse(model)
+                print ('before valid')
+                idx = 0
+                for m in model.modules():
+                    if isinstance(m, nn.Linear):
+                        if idx == 0:
+                            _w = m.weight
+                            print (_w[_w == 0].size())
+                        idx += 1
         acc1 = validate(val_loader, model, criterion, args)
 
         # remember best acc@1 and save checkpoint
@@ -240,6 +255,7 @@ def main_worker(gpu, ngpus_per_node, args):
             'best_acc1': best_acc1,
             'optimizer' : optimizer.state_dict(),
         }, is_best, current=current)
+        
     
 def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, sparse_param=None, pruning=None, regulier=None):
     batch_time = AverageMeter()
@@ -261,12 +277,12 @@ def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, spa
         target = target.cuda(args.gpu, non_blocking=True)
 
         # compute output
-        if args.is_prune:
+        if args.prune:
             if conf['scheme'] == 'naive':
                 pruning.RecoverSparse(model)
         output = model(input)
         loss = criterion(output, target)
-        if args.is_prune:
+        if args.prune:
             if conf['scheme'] == 'admm':
                 loss += sparse_param.ComputeRegulier(regulier, model)
 
@@ -281,7 +297,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, spa
         loss.backward()
         optimizer.step()
 
-        if args.is_prune:
+        if args.prune:
             if conf['scheme'] == 'admm':
                 if i % sparse_param.update_step == 0:
                     sparse_param.UpdateParameter(model)
@@ -289,7 +305,6 @@ def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, spa
         # measure elapsed time
         batch_time.update(time.time() - end)
         end = time.time()
-
         if i % args.print_freq == 0:
             print('Epoch: [{0}][{1}/{2}]\t'
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
@@ -299,6 +314,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, spa
                   'Acc@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
                    epoch, i, len(train_loader), batch_time=batch_time,
                    data_time=data_time, loss=losses, top1=top1, top5=top5))
+            
     return sparse_param
 
 def validate(val_loader, model, criterion, args):
@@ -380,7 +396,7 @@ def adjust_learning_rate(optimizer, epoch, args):
         lr = args.lr * (0.1 ** (epoch // 30))
     """
     for param_group in optimizer.param_groups:
-        param_group['lr'] *= (0.9 ** (epoch // args.lr_decay))
+        param_group['lr'] *= (0.5 ** (epoch // args.lr_decay))
 
 
 def accuracy(output, target, topk=(1,)):

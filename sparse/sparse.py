@@ -12,7 +12,9 @@ class SparseParam(object):
         self.pruned_idx = [int(x) for x in conf['pruned_idx'].split(',')]
         # whether all conv layers in the block uses the same ratio. only active for bottleneck like models
         # such as ResNet
-        self.apply_bolck = bool(conf['apply_block'])
+        self.apply_block = False
+        if conf['apply_block'] == 'True':
+            self.apply_block = True
         self.block_dict = {}
     def GenBlockDict(self, model):
         pass
@@ -27,12 +29,12 @@ class PruningWeight(object):
 
     def Init(self, model):
         _idx = 0
-        if not self.sparse_param.apply_bolck:
+        if not self.sparse_param.apply_block:
             for m in model.modules():            
                 if isinstance(m, self.sparse_param.sparse_option[self.sparse_param.sparse_part]):                
                     if _idx in self.sparse_param.pruned_idx:
                         with torch.no_grad():
-                            m.weight.copy_(self._SetUpPruning(m.weight))
+                            m.weight.copy_(self._SetUpPruning(m.weight, self.sparse_param.expected_ratio[_idx]))
                         _idx += 1
         else:
             self.sparse_param.GenBlockDict(model)
@@ -41,10 +43,10 @@ class PruningWeight(object):
                     for m in _blocks.modules():
                         if isinstance(m, nn.Conv2d):
                             with torch.no_grad():
-                                m.weight.copy_(self._SetUpPruning(m.weight))
-
-    def _SetUpPruning(self, weight):
-        _threshold = self._FindMidValue(weight, self.sparse_param.expected_ratio)
+                                m.weight.copy_(self._SetUpPruning(m.weight, self.sparse_param.expected_ratio[_idx]))
+        
+    def _SetUpPruning(self, weight, ratio):
+        _threshold = self._FindMidValue(weight, ratio)
         sparse_weight, _Mask = self._InitMask(weight, _threshold)
         self.threshold.append(_threshold)
         self.MaskList.append(_Mask)
@@ -64,12 +66,13 @@ class PruningWeight(object):
 
     def RecoverSparse(self, model):
         _idx = 0
-        if not self.sparse_param.apply_bolck:
+        if not self.sparse_param.apply_block:
             for m in model.modules():
                 if isinstance(m, self.sparse_param.sparse_option[self.sparse_param.sparse_part]):
                     if _idx in self.sparse_param.pruned_idx:
                         with torch.no_grad():
                             m.weight.copy_(m.weight * self.MaskList[_idx])
+                            _w = m.weight
                         _idx += 1
         else:
             for _idx_ in self.sparse_param.pruned_idx:

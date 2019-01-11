@@ -1,0 +1,8 @@
+=> using pre-trained model 'alexnet'
+read conf from:  conf/admm.conf
+print weight distribution information....
+idx: 0, mean: -0.0001, var: 0.013685
+idx: 1, mean: -0.0032, var: 0.002215
+idx: 2, mean: -0.0029, var: 0.001227
+idx: 3, mean: -0.0031, var: 0.000763
+idx: 4, mean: -0.0041, var: 0.000696

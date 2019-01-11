@@ -49,6 +49,21 @@ class ADMMParameter(SparseParam):
                     _pruned_idx += 1
                 _idx += 1
 
+    def CheckDistribution(self, model):
+        _idx = 0
+        _pruned_idx = 0
+        means = []
+        vars = []
+        for m in model.modules():
+            if isinstance(m, nn.Conv2d):
+                if _idx in self.pruned_idx:
+                    with torch.no_grad():
+                        means.append(torch.mean(m.weight))
+                        vars.append(torch.var(m.weight))
+                    _pruned_idx += 1
+                _idx += 1
+        return zip(means, vars)
+
     def _PruneWeight(self, weight, ratio):
         flatten_weight = torch.flatten(torch.abs(weight))
         sorted, _ = torch.sort(flatten_weight)
