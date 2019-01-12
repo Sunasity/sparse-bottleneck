@@ -1,11 +1,17 @@
 # Pytorch implementation of Sparse NN
 
-### Experimental results:
+### Experimental results
 
 To be added.
 
+### Quick start example
+- start command
+```
+python main.py --arch=vgg16 --pretrained --finetune_lr=1e-3 --lr_decay=30 --prune --conf=conf/vgg.conf
+```
+- conf is used to define the layers to be pruned, expected sparsity and other hyper-parameters for pruning.
 
-### The pruning schemes follow these papers:
+### The pruning schemes follow these papers
 ```
 @inproceedings{han2015learning,
   title={Learning both weights and connections for efficient neural network},
