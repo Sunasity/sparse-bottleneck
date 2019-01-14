@@ -19,8 +19,6 @@ class SparseParam(object):
     def GenBlockDict(self, model):
         pass
 
-
-
 class PruningWeight(object):
     def __init__(self, sparse_param=None):
         self.MaskList = []
@@ -33,7 +31,7 @@ class PruningWeight(object):
             for m in model.modules():            
                 if isinstance(m, self.sparse_param.sparse_option[self.sparse_param.sparse_part]):                
                     if _idx in self.sparse_param.pruned_idx:
-                        with torch.no_grad():
+                        with torch.no_grad():                                                    
                             m.weight.copy_(self._SetUpPruning(m.weight, self.sparse_param.expected_ratio[_idx]))
                         _idx += 1
         else:
@@ -54,7 +52,7 @@ class PruningWeight(object):
 
     def _FindMidValue(self, weight, ratio):
         flatten_weight = torch.flatten(torch.abs(weight))
-        sorted, _ = torch.sort(flatten_weight)
+        sorted, _ = torch.sort(flatten_weight)      
         index = int(ratio*flatten_weight.size()[0])
         threshold = sorted[index]
         return threshold

@@ -1,8 +1,10 @@
-=> using pre-trained model 'alexnet'
+=> creating model 'alexnet'
+=> loading checkpoint 'checkpoints/alex-admm-1/model_best.pth.tar'
+=> loaded checkpoint 'checkpoints/alex-admm-1/model_best.pth.tar' 
 read conf from:  conf/admm.conf
 print weight distribution information....
-idx: 0, mean: -0.0001, var: 0.013685
-idx: 1, mean: -0.0032, var: 0.002215
-idx: 2, mean: -0.0029, var: 0.001227
-idx: 3, mean: -0.0031, var: 0.000763
-idx: 4, mean: -0.0041, var: 0.000696
+idx: 0, mean: -0.0001, var: 0.013911
+idx: 1, mean: -0.0029, var: 0.002086
+idx: 2, mean: -0.0026, var: 0.001138
+idx: 3, mean: -0.0026, var: 0.000705
+idx: 4, mean: -0.0036, var: 0.000649

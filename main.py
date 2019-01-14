@@ -6,6 +6,7 @@ import time
 import warnings
 import sys
 import configparser
+import numpy as np
 
 import torch
 import torch.nn as nn
@@ -138,27 +139,6 @@ def main_worker(gpu, ngpus_per_node, args):
     optimizer = torch.optim.SGD(model.parameters(), args.finetune_lr, 
                                             momentum=args.momentum,
                                             weight_decay=args.weight_decay)
-    
-    #--------init pruning-----------------------------------     
-    pruning = None
-    regulier = None
-    sparse_param = None                                       
-    if args.prune:
-        conf = read_config(args.conf)
-        if conf['scheme'] == 'naive':
-            #for vgg
-            optimizer = torch.optim.SGD([{'params': model.classifier[0].parameters(), 'lr': args.finetune_lr}], 
-                                        0.0,
-                                        momentum=args.momentum,
-                                        weight_decay=args.weight_decay) 
-
-            sparse_param = sparse.SparseParam(conf)
-            pruning = sparse.PruningWeight(sparse_param)
-            pruning.Init(model)
-        elif conf['scheme'] == 'admm':
-            sparse_param = admm_sparse.ADMMParameter(conf)
-            sparse_param.InitParameter(model)
-            regulier = nn.MSELoss(size_average=False)
     # optionally resume from a checkpoint
     if args.resume:
         if os.path.isfile(args.resume):
@@ -172,8 +152,29 @@ def main_worker(gpu, ngpus_per_node, args):
                   .format(args.resume))
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
-
     cudnn.benchmark = True
+
+     #--------init pruning-----------------------------------     
+    pruning = None
+    regulier = None
+    sparse_param = None                                  
+    if args.prune:
+        conf = read_config(args.conf)
+        if conf['scheme'] == 'naive':
+            #for vgg
+            optimizer = torch.optim.SGD([{'params': model.classifier[0].parameters(), 'lr': args.finetune_lr}], 
+                                        0.0,
+                                        momentum=args.momentum,
+                                        weight_decay=args.weight_decay) 
+
+            sparse_param = sparse.SparseParam(conf)
+            pruning = sparse.PruningWeight(sparse_param)
+            
+            pruning.Init(model)
+        elif conf['scheme'] == 'admm':
+            sparse_param = admm_sparse.ADMMParameter(conf)
+            sparse_param.InitParameter(model)
+            regulier = nn.MSELoss(size_average=False)
 
     # Data loading code
     traindir = os.path.join(args.data, 'train')
@@ -206,10 +207,11 @@ def main_worker(gpu, ngpus_per_node, args):
         batch_size=args.batch_size, shuffle=False,
         num_workers=args.workers, pin_memory=True)
 
+    
     if args.evaluate:
-        if args.prune:
-            if conf['scheme'] == 'naive':
-                pruning.RecoverSparse(model)
+        if args.prune:            
+            if conf['scheme'] == 'naive':                
+                pruning.RecoverSparse(model)                                
         validate(val_loader, model, criterion, args)
         return
     
@@ -219,7 +221,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch, args)
-
+        
         # check wieght dist
         if args.prune:
             if conf['scheme'] == 'admm':
@@ -229,25 +231,15 @@ def main_worker(gpu, ngpus_per_node, args):
                     print ('idx: %d, mean: %.4f, var: %4f' % (sparse_param.pruned_idx[i_], wd[0], wd[1])) 
         # train for one epoch 
         sparse_param = train(train_loader, model, criterion, optimizer, epoch, args, conf, sparse_param, pruning, regulier)
-
+        
         # evaluate on validation set
         if args.prune:
             if conf['scheme'] == 'naive':
                 pruning.RecoverSparse(model)
-                print ('before valid')
-                idx = 0
-                for m in model.modules():
-                    if isinstance(m, nn.Linear):
-                        if idx == 0:
-                            _w = m.weight
-                            print (_w[_w == 0].size())
-                        idx += 1
         acc1 = validate(val_loader, model, criterion, args)
-
         # remember best acc@1 and save checkpoint
         is_best = acc1 > best_acc1
         best_acc1 = max(acc1, best_acc1)
-
         save_checkpoint({
             'epoch': epoch + 1,
             'arch': args.arch,
@@ -255,7 +247,7 @@ def main_worker(gpu, ngpus_per_node, args):
             'best_acc1': best_acc1,
             'optimizer' : optimizer.state_dict(),
         }, is_best, current=current)
-        
+    
     
 def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, sparse_param=None, pruning=None, regulier=None):
     batch_time = AverageMeter()
