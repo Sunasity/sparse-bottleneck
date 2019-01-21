@@ -1,0 +1,452 @@
+=> using pre-trained model 'vgg16'
+checkpoint dir:  checkpoints/1547895716/
+weight information for regulizer based pretrain
+[tensor(0.0040, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0147, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.8891e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.7027e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [0][0/5005]	Time 20.390 (20.390)	Data 2.016 (2.016)	Loss 1.2656 (1.2656)	Acc@1 69.141 (69.141)	Acc@5 87.500 (87.500)
+Epoch: [0][500/5005]	Time 0.591 (0.633)	Data 0.000 (0.004)	Loss 1.4098 (1.3331)	Acc@1 64.844 (68.001)	Acc@5 84.375 (86.831)
+Epoch: [0][1000/5005]	Time 0.595 (0.614)	Data 0.000 (0.003)	Loss 1.2928 (1.3304)	Acc@1 69.141 (68.038)	Acc@5 87.500 (86.863)
+Epoch: [0][1500/5005]	Time 0.595 (0.608)	Data 0.000 (0.002)	Loss 1.4348 (1.3293)	Acc@1 63.281 (68.049)	Acc@5 86.328 (86.886)
+Epoch: [0][2000/5005]	Time 0.591 (0.604)	Data 0.000 (0.002)	Loss 1.3750 (1.3294)	Acc@1 64.062 (68.045)	Acc@5 87.891 (86.889)
+Epoch: [0][2500/5005]	Time 0.588 (0.602)	Data 0.000 (0.002)	Loss 1.1987 (1.3300)	Acc@1 69.922 (68.012)	Acc@5 89.844 (86.869)
+Epoch: [0][3000/5005]	Time 0.595 (0.601)	Data 0.000 (0.002)	Loss 1.4103 (1.3281)	Acc@1 66.406 (68.009)	Acc@5 85.156 (86.889)
+Epoch: [0][3500/5005]	Time 0.596 (0.600)	Data 0.000 (0.001)	Loss 1.1851 (1.3293)	Acc@1 73.438 (67.999)	Acc@5 87.500 (86.866)
+Epoch: [0][4000/5005]	Time 0.593 (0.600)	Data 0.000 (0.001)	Loss 1.3055 (1.3291)	Acc@1 70.312 (68.006)	Acc@5 86.719 (86.870)
+Epoch: [0][4500/5005]	Time 0.597 (0.599)	Data 0.000 (0.001)	Loss 1.2659 (1.3284)	Acc@1 69.141 (68.009)	Acc@5 87.500 (86.880)
+Epoch: [0][5000/5005]	Time 0.590 (0.598)	Data 0.000 (0.001)	Loss 1.3167 (1.3288)	Acc@1 66.797 (67.999)	Acc@5 86.719 (86.871)
+Test: [0/196]	Time 1.614 (1.614)	Loss 0.6157 (0.6157)	Acc@1 82.812 (82.812)	Acc@5 96.484 (96.484)
+ * Acc@1 71.056 Acc@5 90.054
+weight information for regulizer based pretrain
+[tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0146, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.7916e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.6662e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [1][0/5005]	Time 2.250 (2.250)	Data 1.978 (1.978)	Loss 1.4151 (1.4151)	Acc@1 67.578 (67.578)	Acc@5 86.719 (86.719)
+Epoch: [1][500/5005]	Time 0.598 (0.599)	Data 0.000 (0.005)	Loss 1.3921 (1.3404)	Acc@1 67.969 (67.841)	Acc@5 85.156 (86.737)
+Epoch: [1][1000/5005]	Time 0.596 (0.597)	Data 0.000 (0.003)	Loss 1.2807 (1.3332)	Acc@1 69.141 (67.976)	Acc@5 88.672 (86.811)
+Epoch: [1][1500/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.3229 (1.3291)	Acc@1 69.922 (68.003)	Acc@5 86.719 (86.835)
+Epoch: [1][2000/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.3060 (1.3292)	Acc@1 71.484 (68.020)	Acc@5 88.672 (86.856)
+Epoch: [1][2500/5005]	Time 0.598 (0.596)	Data 0.001 (0.002)	Loss 1.3034 (1.3297)	Acc@1 67.969 (68.033)	Acc@5 89.062 (86.829)
+Epoch: [1][3000/5005]	Time 0.597 (0.596)	Data 0.000 (0.002)	Loss 1.2607 (1.3297)	Acc@1 66.797 (68.033)	Acc@5 86.719 (86.843)
+Epoch: [1][3500/5005]	Time 0.601 (0.596)	Data 0.000 (0.002)	Loss 1.4716 (1.3301)	Acc@1 67.188 (68.032)	Acc@5 84.375 (86.835)
+Epoch: [1][4000/5005]	Time 0.600 (0.596)	Data 0.000 (0.001)	Loss 1.4769 (1.3291)	Acc@1 65.625 (68.039)	Acc@5 83.594 (86.847)
+Epoch: [1][4500/5005]	Time 0.589 (0.596)	Data 0.000 (0.001)	Loss 1.2568 (1.3289)	Acc@1 68.750 (68.024)	Acc@5 85.938 (86.850)
+Epoch: [1][5000/5005]	Time 0.591 (0.595)	Data 0.000 (0.001)	Loss 1.2303 (1.3295)	Acc@1 71.094 (68.005)	Acc@5 87.109 (86.835)
+Test: [0/196]	Time 1.660 (1.660)	Loss 0.6146 (0.6146)	Acc@1 84.375 (84.375)	Acc@5 96.484 (96.484)
+ * Acc@1 71.008 Acc@5 90.080
+weight information for regulizer based pretrain
+[tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0146, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.6950e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.6302e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [2][0/5005]	Time 2.210 (2.210)	Data 1.990 (1.990)	Loss 1.3914 (1.3914)	Acc@1 69.531 (69.531)	Acc@5 83.594 (83.594)
+Epoch: [2][500/5005]	Time 0.596 (0.599)	Data 0.000 (0.005)	Loss 1.2884 (1.3284)	Acc@1 69.531 (67.969)	Acc@5 83.984 (86.864)
+Epoch: [2][1000/5005]	Time 0.595 (0.597)	Data 0.000 (0.003)	Loss 1.2318 (1.3278)	Acc@1 70.312 (67.984)	Acc@5 88.672 (86.884)
+Epoch: [2][1500/5005]	Time 0.597 (0.596)	Data 0.000 (0.002)	Loss 1.1803 (1.3308)	Acc@1 73.047 (68.002)	Acc@5 89.844 (86.820)
+Epoch: [2][2000/5005]	Time 0.598 (0.596)	Data 0.000 (0.002)	Loss 1.4760 (1.3295)	Acc@1 66.797 (68.008)	Acc@5 85.156 (86.838)
+Epoch: [2][2500/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.2977 (1.3269)	Acc@1 63.281 (68.044)	Acc@5 86.719 (86.879)
+Epoch: [2][3000/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.2704 (1.3282)	Acc@1 69.922 (67.982)	Acc@5 86.328 (86.850)
+Epoch: [2][3500/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.3048 (1.3269)	Acc@1 67.578 (68.019)	Acc@5 86.328 (86.863)
+Epoch: [2][4000/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.2696 (1.3271)	Acc@1 66.406 (68.014)	Acc@5 89.062 (86.871)
+Epoch: [2][4500/5005]	Time 0.598 (0.595)	Data 0.000 (0.001)	Loss 1.3122 (1.3270)	Acc@1 67.578 (68.022)	Acc@5 88.281 (86.879)
+Epoch: [2][5000/5005]	Time 0.600 (0.595)	Data 0.000 (0.001)	Loss 1.3854 (1.3265)	Acc@1 67.578 (68.027)	Acc@5 84.766 (86.886)
+Test: [0/196]	Time 1.828 (1.828)	Loss 0.6103 (0.6103)	Acc@1 83.594 (83.594)	Acc@5 96.875 (96.875)
+ * Acc@1 70.946 Acc@5 90.052
+weight information for regulizer based pretrain
+[tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0145, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.5993e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.5945e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [3][0/5005]	Time 2.175 (2.175)	Data 1.958 (1.958)	Loss 1.2081 (1.2081)	Acc@1 70.312 (70.312)	Acc@5 87.891 (87.891)
+Epoch: [3][500/5005]	Time 0.598 (0.599)	Data 0.000 (0.005)	Loss 1.0813 (1.3264)	Acc@1 74.609 (68.103)	Acc@5 91.016 (86.833)
+Epoch: [3][1000/5005]	Time 0.596 (0.597)	Data 0.000 (0.003)	Loss 1.3860 (1.3262)	Acc@1 67.969 (68.156)	Acc@5 85.547 (86.810)
+Epoch: [3][1500/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.5070 (1.3245)	Acc@1 61.719 (68.194)	Acc@5 85.156 (86.883)
+Epoch: [3][2000/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.1683 (1.3244)	Acc@1 69.922 (68.173)	Acc@5 87.500 (86.909)
+Epoch: [3][2500/5005]	Time 0.587 (0.596)	Data 0.000 (0.002)	Loss 1.0892 (1.3252)	Acc@1 71.484 (68.124)	Acc@5 91.016 (86.891)
+Epoch: [3][3000/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.2753 (1.3268)	Acc@1 69.531 (68.088)	Acc@5 87.109 (86.873)
+Epoch: [3][3500/5005]	Time 0.589 (0.595)	Data 0.000 (0.002)	Loss 1.4874 (1.3265)	Acc@1 65.234 (68.090)	Acc@5 83.594 (86.880)
+Epoch: [3][4000/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.2380 (1.3266)	Acc@1 70.312 (68.074)	Acc@5 87.109 (86.876)
+Epoch: [3][4500/5005]	Time 0.591 (0.595)	Data 0.000 (0.001)	Loss 1.2487 (1.3270)	Acc@1 69.531 (68.062)	Acc@5 89.062 (86.873)
+Epoch: [3][5000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.4487 (1.3265)	Acc@1 64.453 (68.059)	Acc@5 85.938 (86.880)
+Test: [0/196]	Time 1.544 (1.544)	Loss 0.5986 (0.5986)	Acc@1 84.375 (84.375)	Acc@5 96.875 (96.875)
+ * Acc@1 71.028 Acc@5 90.050
+weight information for regulizer based pretrain
+[tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0078, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0144, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.5047e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.5592e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [4][0/5005]	Time 2.099 (2.099)	Data 1.883 (1.883)	Loss 1.3051 (1.3051)	Acc@1 70.703 (70.703)	Acc@5 89.062 (89.062)
+Epoch: [4][500/5005]	Time 0.594 (0.598)	Data 0.000 (0.005)	Loss 1.1874 (1.3277)	Acc@1 71.094 (68.094)	Acc@5 87.891 (86.992)
+Epoch: [4][1000/5005]	Time 0.597 (0.596)	Data 0.000 (0.003)	Loss 1.2457 (1.3268)	Acc@1 68.750 (68.053)	Acc@5 88.281 (86.949)
+Epoch: [4][1500/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.2452 (1.3266)	Acc@1 69.531 (68.030)	Acc@5 86.719 (86.953)
+Epoch: [4][2000/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.4335 (1.3270)	Acc@1 63.281 (68.027)	Acc@5 82.031 (86.916)
+Epoch: [4][2500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.1605 (1.3247)	Acc@1 68.359 (68.062)	Acc@5 90.234 (86.965)
+Epoch: [4][3000/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.1680 (1.3268)	Acc@1 72.266 (68.033)	Acc@5 88.672 (86.931)
+Epoch: [4][3500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.2357 (1.3268)	Acc@1 67.969 (68.046)	Acc@5 85.156 (86.918)
+Epoch: [4][4000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.4910 (1.3268)	Acc@1 62.891 (68.023)	Acc@5 85.156 (86.913)
+Epoch: [4][4500/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.3775 (1.3262)	Acc@1 68.750 (68.025)	Acc@5 84.766 (86.917)
+Epoch: [4][5000/5005]	Time 0.596 (0.594)	Data 0.000 (0.001)	Loss 1.3281 (1.3261)	Acc@1 70.703 (68.043)	Acc@5 85.156 (86.905)
+Test: [0/196]	Time 1.506 (1.506)	Loss 0.6150 (0.6150)	Acc@1 84.375 (84.375)	Acc@5 96.875 (96.875)
+ * Acc@1 70.848 Acc@5 90.018
+weight information for regulizer based pretrain
+[tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0078, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0144, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.4111e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.5243e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [5][0/5005]	Time 2.254 (2.254)	Data 2.041 (2.041)	Loss 1.4597 (1.4597)	Acc@1 67.188 (67.188)	Acc@5 85.547 (85.547)
+Epoch: [5][500/5005]	Time 0.592 (0.598)	Data 0.000 (0.005)	Loss 1.0167 (1.3221)	Acc@1 73.438 (68.153)	Acc@5 91.797 (86.893)
+Epoch: [5][1000/5005]	Time 0.603 (0.596)	Data 0.000 (0.003)	Loss 1.3611 (1.3252)	Acc@1 62.891 (68.168)	Acc@5 86.719 (86.915)
+Epoch: [5][1500/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.1953 (1.3243)	Acc@1 74.609 (68.086)	Acc@5 87.500 (86.974)
+Epoch: [5][2000/5005]	Time 0.599 (0.596)	Data 0.000 (0.002)	Loss 1.2474 (1.3255)	Acc@1 67.578 (68.068)	Acc@5 85.938 (86.925)
+Epoch: [5][2500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.3021 (1.3237)	Acc@1 67.969 (68.102)	Acc@5 88.281 (86.937)
+Epoch: [5][3000/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.4073 (1.3239)	Acc@1 66.016 (68.088)	Acc@5 87.109 (86.924)
+Epoch: [5][3500/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.4531 (1.3239)	Acc@1 66.797 (68.077)	Acc@5 85.156 (86.922)
+Epoch: [5][4000/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.3683 (1.3249)	Acc@1 66.797 (68.061)	Acc@5 87.109 (86.921)
+Epoch: [5][4500/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.3025 (1.3248)	Acc@1 69.531 (68.068)	Acc@5 86.328 (86.923)
+Epoch: [5][5000/5005]	Time 0.594 (0.594)	Data 0.000 (0.001)	Loss 1.3359 (1.3242)	Acc@1 64.844 (68.082)	Acc@5 85.547 (86.930)
+Test: [0/196]	Time 1.607 (1.607)	Loss 0.6240 (0.6240)	Acc@1 83.984 (83.984)	Acc@5 97.266 (97.266)
+ * Acc@1 70.858 Acc@5 90.044
+weight information for regulizer based pretrain
+[tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0143, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.3185e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.4898e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [6][0/5005]	Time 2.228 (2.228)	Data 2.017 (2.017)	Loss 1.4811 (1.4811)	Acc@1 67.188 (67.188)	Acc@5 85.547 (85.547)
+Epoch: [6][500/5005]	Time 0.596 (0.598)	Data 0.000 (0.005)	Loss 1.3224 (1.3294)	Acc@1 67.578 (67.858)	Acc@5 87.500 (86.822)
+Epoch: [6][1000/5005]	Time 0.597 (0.596)	Data 0.000 (0.003)	Loss 1.2686 (1.3310)	Acc@1 69.141 (67.785)	Acc@5 85.938 (86.798)
+Epoch: [6][1500/5005]	Time 0.588 (0.596)	Data 0.000 (0.002)	Loss 1.3823 (1.3293)	Acc@1 67.188 (67.927)	Acc@5 85.938 (86.815)
+Epoch: [6][2000/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.4846 (1.3279)	Acc@1 69.141 (67.987)	Acc@5 82.422 (86.832)
+Epoch: [6][2500/5005]	Time 0.590 (0.595)	Data 0.000 (0.002)	Loss 1.3316 (1.3294)	Acc@1 66.406 (67.964)	Acc@5 86.719 (86.812)
+Epoch: [6][3000/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.1801 (1.3282)	Acc@1 70.703 (67.991)	Acc@5 88.281 (86.842)
+Epoch: [6][3500/5005]	Time 0.593 (0.594)	Data 0.000 (0.002)	Loss 1.3541 (1.3272)	Acc@1 66.797 (67.970)	Acc@5 85.156 (86.869)
+Epoch: [6][4000/5005]	Time 0.591 (0.594)	Data 0.000 (0.001)	Loss 1.5001 (1.3266)	Acc@1 65.234 (67.996)	Acc@5 84.375 (86.883)
+Epoch: [6][4500/5005]	Time 0.591 (0.594)	Data 0.000 (0.001)	Loss 1.3142 (1.3260)	Acc@1 73.047 (68.007)	Acc@5 87.891 (86.881)
+Epoch: [6][5000/5005]	Time 0.598 (0.594)	Data 0.000 (0.001)	Loss 1.3193 (1.3262)	Acc@1 69.531 (68.013)	Acc@5 85.547 (86.879)
+Test: [0/196]	Time 1.544 (1.544)	Loss 0.6033 (0.6033)	Acc@1 83.984 (83.984)	Acc@5 97.266 (97.266)
+ * Acc@1 70.858 Acc@5 89.986
+weight information for regulizer based pretrain
+[tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0142, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.2269e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.4556e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [7][0/5005]	Time 2.296 (2.296)	Data 2.089 (2.089)	Loss 1.2466 (1.2466)	Acc@1 71.875 (71.875)	Acc@5 87.891 (87.891)
+Epoch: [7][500/5005]	Time 0.595 (0.598)	Data 0.000 (0.005)	Loss 1.3235 (1.3277)	Acc@1 70.703 (68.095)	Acc@5 86.719 (86.842)
+Epoch: [7][1000/5005]	Time 0.598 (0.596)	Data 0.000 (0.003)	Loss 1.3899 (1.3285)	Acc@1 67.188 (68.103)	Acc@5 86.328 (86.808)
+Epoch: [7][1500/5005]	Time 0.590 (0.595)	Data 0.000 (0.002)	Loss 1.3757 (1.3283)	Acc@1 70.312 (68.074)	Acc@5 86.328 (86.842)
+Epoch: [7][2000/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.3960 (1.3268)	Acc@1 68.359 (68.086)	Acc@5 85.547 (86.870)
+Epoch: [7][2500/5005]	Time 0.594 (0.595)	Data 0.000 (0.002)	Loss 1.3046 (1.3249)	Acc@1 66.797 (68.097)	Acc@5 90.234 (86.892)
+Epoch: [7][3000/5005]	Time 0.589 (0.595)	Data 0.000 (0.002)	Loss 1.2510 (1.3253)	Acc@1 67.188 (68.091)	Acc@5 86.719 (86.883)
+Epoch: [7][3500/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.2008 (1.3249)	Acc@1 71.094 (68.097)	Acc@5 88.672 (86.896)
+Epoch: [7][4000/5005]	Time 0.591 (0.594)	Data 0.000 (0.001)	Loss 1.1804 (1.3248)	Acc@1 72.266 (68.101)	Acc@5 89.453 (86.893)
+Epoch: [7][4500/5005]	Time 0.590 (0.594)	Data 0.000 (0.001)	Loss 1.3490 (1.3260)	Acc@1 70.703 (68.079)	Acc@5 87.500 (86.874)
+Epoch: [7][5000/5005]	Time 0.593 (0.594)	Data 0.000 (0.001)	Loss 1.3051 (1.3259)	Acc@1 70.312 (68.081)	Acc@5 87.891 (86.866)
+Test: [0/196]	Time 1.554 (1.554)	Loss 0.6174 (0.6174)	Acc@1 83.594 (83.594)	Acc@5 96.875 (96.875)
+ * Acc@1 70.966 Acc@5 89.984
+weight information for regulizer based pretrain
+[tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0141, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.1362e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.4218e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [8][0/5005]	Time 2.274 (2.274)	Data 2.056 (2.056)	Loss 1.3422 (1.3422)	Acc@1 67.969 (67.969)	Acc@5 83.984 (83.984)
+Epoch: [8][500/5005]	Time 0.598 (0.599)	Data 0.000 (0.005)	Loss 1.2644 (1.3211)	Acc@1 69.531 (68.234)	Acc@5 86.328 (86.953)
+Epoch: [8][1000/5005]	Time 0.599 (0.597)	Data 0.000 (0.003)	Loss 1.4733 (1.3221)	Acc@1 68.750 (68.188)	Acc@5 83.984 (86.932)
+Epoch: [8][1500/5005]	Time 0.595 (0.596)	Data 0.000 (0.002)	Loss 1.4323 (1.3237)	Acc@1 65.625 (68.108)	Acc@5 85.156 (86.942)
+Epoch: [8][2000/5005]	Time 0.590 (0.596)	Data 0.000 (0.002)	Loss 1.5072 (1.3255)	Acc@1 63.281 (68.053)	Acc@5 83.203 (86.909)
+Epoch: [8][2500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.3209 (1.3249)	Acc@1 68.750 (68.049)	Acc@5 85.938 (86.897)
+Epoch: [8][3000/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.2302 (1.3254)	Acc@1 68.750 (68.037)	Acc@5 85.938 (86.891)
+Epoch: [8][3500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.4277 (1.3262)	Acc@1 64.844 (68.035)	Acc@5 86.719 (86.881)
+Epoch: [8][4000/5005]	Time 0.595 (0.595)	Data 0.000 (0.001)	Loss 1.2792 (1.3258)	Acc@1 72.656 (68.052)	Acc@5 86.719 (86.877)
+Epoch: [8][4500/5005]	Time 0.590 (0.595)	Data 0.000 (0.001)	Loss 1.4790 (1.3252)	Acc@1 67.188 (68.070)	Acc@5 82.812 (86.891)
+Epoch: [8][5000/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.3285 (1.3241)	Acc@1 69.141 (68.077)	Acc@5 85.547 (86.913)
+Test: [0/196]	Time 1.557 (1.557)	Loss 0.6258 (0.6258)	Acc@1 82.422 (82.422)	Acc@5 96.875 (96.875)
+ * Acc@1 70.934 Acc@5 90.040
+weight information for regulizer based pretrain
+[tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0076, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0141, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(9.0465e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.3884e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [9][0/5005]	Time 2.136 (2.136)	Data 1.922 (1.922)	Loss 1.3254 (1.3254)	Acc@1 66.406 (66.406)	Acc@5 85.938 (85.938)
+Epoch: [9][500/5005]	Time 0.596 (0.598)	Data 0.000 (0.005)	Loss 1.1733 (1.3247)	Acc@1 69.922 (68.076)	Acc@5 89.062 (86.936)
+Epoch: [9][1000/5005]	Time 0.597 (0.596)	Data 0.000 (0.003)	Loss 1.0707 (1.3209)	Acc@1 73.828 (68.144)	Acc@5 90.625 (86.973)
+Epoch: [9][1500/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.2627 (1.3230)	Acc@1 68.359 (68.102)	Acc@5 89.844 (86.949)
+Epoch: [9][2000/5005]	Time 0.598 (0.595)	Data 0.000 (0.002)	Loss 1.3672 (1.3238)	Acc@1 70.312 (68.143)	Acc@5 85.938 (86.955)
+Epoch: [9][2500/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.3545 (1.3249)	Acc@1 63.672 (68.118)	Acc@5 87.891 (86.937)
+Epoch: [9][3000/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.3635 (1.3250)	Acc@1 66.016 (68.107)	Acc@5 86.719 (86.942)
+Epoch: [9][3500/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.2228 (1.3257)	Acc@1 69.922 (68.093)	Acc@5 89.062 (86.944)
+Epoch: [9][4000/5005]	Time 0.592 (0.594)	Data 0.000 (0.001)	Loss 1.4039 (1.3250)	Acc@1 64.062 (68.126)	Acc@5 86.328 (86.945)
+Epoch: [9][4500/5005]	Time 0.592 (0.594)	Data 0.000 (0.001)	Loss 1.4584 (1.3249)	Acc@1 64.844 (68.128)	Acc@5 83.203 (86.939)
+Epoch: [9][5000/5005]	Time 0.600 (0.594)	Data 0.000 (0.001)	Loss 1.0485 (1.3255)	Acc@1 75.000 (68.127)	Acc@5 89.453 (86.925)
+Test: [0/196]	Time 1.559 (1.559)	Loss 0.6263 (0.6263)	Acc@1 83.594 (83.594)	Acc@5 96.484 (96.484)
+ * Acc@1 70.912 Acc@5 89.984
+weight information for regulizer based pretrain
+[tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0076, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0140, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.9577e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.3553e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [10][0/5005]	Time 2.243 (2.243)	Data 2.024 (2.024)	Loss 1.3577 (1.3577)	Acc@1 66.797 (66.797)	Acc@5 88.281 (88.281)
+Epoch: [10][500/5005]	Time 0.592 (0.599)	Data 0.000 (0.005)	Loss 1.1373 (1.3220)	Acc@1 71.875 (68.164)	Acc@5 89.453 (86.898)
+Epoch: [10][1000/5005]	Time 0.593 (0.598)	Data 0.000 (0.003)	Loss 1.5572 (1.3265)	Acc@1 61.328 (68.055)	Acc@5 83.984 (86.845)
+Epoch: [10][1500/5005]	Time 0.597 (0.597)	Data 0.000 (0.002)	Loss 1.1427 (1.3258)	Acc@1 68.359 (68.078)	Acc@5 90.234 (86.841)
+Epoch: [10][2000/5005]	Time 0.591 (0.596)	Data 0.000 (0.002)	Loss 1.0733 (1.3222)	Acc@1 72.266 (68.140)	Acc@5 91.016 (86.923)
+Epoch: [10][2500/5005]	Time 0.596 (0.596)	Data 0.000 (0.002)	Loss 1.3245 (1.3241)	Acc@1 64.844 (68.117)	Acc@5 85.156 (86.924)
+Epoch: [10][3000/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.2244 (1.3253)	Acc@1 68.750 (68.096)	Acc@5 88.672 (86.890)
+Epoch: [10][3500/5005]	Time 0.598 (0.596)	Data 0.000 (0.002)	Loss 1.2384 (1.3249)	Acc@1 72.266 (68.110)	Acc@5 88.672 (86.896)
+Epoch: [10][4000/5005]	Time 0.598 (0.595)	Data 0.000 (0.001)	Loss 1.4135 (1.3248)	Acc@1 67.969 (68.114)	Acc@5 83.984 (86.904)
+Epoch: [10][4500/5005]	Time 0.595 (0.595)	Data 0.000 (0.001)	Loss 1.5785 (1.3260)	Acc@1 66.406 (68.073)	Acc@5 82.031 (86.893)
+Epoch: [10][5000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.5585 (1.3268)	Acc@1 63.281 (68.061)	Acc@5 83.203 (86.885)
+Test: [0/196]	Time 1.507 (1.507)	Loss 0.6271 (0.6271)	Acc@1 82.422 (82.422)	Acc@5 96.875 (96.875)
+ * Acc@1 70.888 Acc@5 89.992
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0076, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0139, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.8698e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.3226e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [11][0/5005]	Time 2.052 (2.052)	Data 1.837 (1.837)	Loss 1.0990 (1.0990)	Acc@1 71.484 (71.484)	Acc@5 89.453 (89.453)
+Epoch: [11][500/5005]	Time 0.589 (0.598)	Data 0.000 (0.005)	Loss 1.1501 (1.3228)	Acc@1 72.656 (68.115)	Acc@5 89.062 (86.962)
+Epoch: [11][1000/5005]	Time 0.589 (0.596)	Data 0.000 (0.003)	Loss 1.5044 (1.3209)	Acc@1 64.062 (68.177)	Acc@5 85.156 (87.001)
+Epoch: [11][1500/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.0758 (1.3219)	Acc@1 71.484 (68.164)	Acc@5 91.016 (86.911)
+Epoch: [11][2000/5005]	Time 0.587 (0.596)	Data 0.000 (0.002)	Loss 1.3733 (1.3232)	Acc@1 67.578 (68.132)	Acc@5 85.156 (86.929)
+Epoch: [11][2500/5005]	Time 0.594 (0.595)	Data 0.000 (0.002)	Loss 1.3016 (1.3226)	Acc@1 68.750 (68.118)	Acc@5 86.719 (86.942)
+Epoch: [11][3000/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.5370 (1.3224)	Acc@1 66.406 (68.134)	Acc@5 82.031 (86.931)
+Epoch: [11][3500/5005]	Time 0.598 (0.595)	Data 0.000 (0.001)	Loss 1.2890 (1.3220)	Acc@1 70.312 (68.147)	Acc@5 88.281 (86.938)
+Epoch: [11][4000/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.1540 (1.3234)	Acc@1 67.969 (68.117)	Acc@5 87.500 (86.919)
+Epoch: [11][4500/5005]	Time 0.590 (0.595)	Data 0.000 (0.001)	Loss 1.3247 (1.3242)	Acc@1 70.703 (68.098)	Acc@5 88.281 (86.912)
+Epoch: [11][5000/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.5008 (1.3250)	Acc@1 64.844 (68.081)	Acc@5 83.984 (86.891)
+Test: [0/196]	Time 1.632 (1.632)	Loss 0.6187 (0.6187)	Acc@1 82.422 (82.422)	Acc@5 96.484 (96.484)
+ * Acc@1 70.852 Acc@5 90.004
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0139, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.7828e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.2902e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [12][0/5005]	Time 2.240 (2.240)	Data 2.024 (2.024)	Loss 1.2482 (1.2482)	Acc@1 72.656 (72.656)	Acc@5 88.672 (88.672)
+Epoch: [12][500/5005]	Time 0.596 (0.598)	Data 0.000 (0.005)	Loss 1.3787 (1.3248)	Acc@1 66.797 (68.028)	Acc@5 87.500 (86.924)
+Epoch: [12][1000/5005]	Time 0.594 (0.597)	Data 0.000 (0.003)	Loss 1.4103 (1.3265)	Acc@1 67.578 (67.983)	Acc@5 83.984 (86.924)
+Epoch: [12][1500/5005]	Time 0.597 (0.596)	Data 0.000 (0.002)	Loss 1.5368 (1.3281)	Acc@1 66.406 (68.009)	Acc@5 82.031 (86.902)
+Epoch: [12][2000/5005]	Time 0.598 (0.596)	Data 0.000 (0.002)	Loss 1.2674 (1.3280)	Acc@1 67.969 (67.987)	Acc@5 88.672 (86.902)
+Epoch: [12][2500/5005]	Time 0.596 (0.596)	Data 0.000 (0.002)	Loss 1.4069 (1.3278)	Acc@1 67.969 (68.000)	Acc@5 85.547 (86.881)
+Epoch: [12][3000/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.1712 (1.3281)	Acc@1 69.141 (68.005)	Acc@5 88.672 (86.880)
+Epoch: [12][3500/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.2430 (1.3267)	Acc@1 71.094 (68.040)	Acc@5 87.891 (86.896)
+Epoch: [12][4000/5005]	Time 0.593 (0.595)	Data 0.000 (0.001)	Loss 1.2079 (1.3266)	Acc@1 72.266 (68.037)	Acc@5 87.109 (86.897)
+Epoch: [12][4500/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.4136 (1.3267)	Acc@1 67.578 (68.035)	Acc@5 86.719 (86.884)
+Epoch: [12][5000/5005]	Time 0.592 (0.595)	Data 0.000 (0.001)	Loss 1.3049 (1.3264)	Acc@1 70.312 (68.045)	Acc@5 85.938 (86.895)
+Test: [0/196]	Time 1.580 (1.580)	Loss 0.6325 (0.6325)	Acc@1 83.203 (83.203)	Acc@5 96.875 (96.875)
+ * Acc@1 70.956 Acc@5 89.922
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0138, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.6967e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.2582e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [13][0/5005]	Time 2.341 (2.341)	Data 2.124 (2.124)	Loss 1.3114 (1.3114)	Acc@1 64.844 (64.844)	Acc@5 88.281 (88.281)
+Epoch: [13][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.1882 (1.3212)	Acc@1 71.875 (68.281)	Acc@5 89.453 (86.930)
+Epoch: [13][1000/5005]	Time 0.592 (0.596)	Data 0.000 (0.003)	Loss 1.1077 (1.3264)	Acc@1 71.484 (68.103)	Acc@5 89.062 (86.878)
+Epoch: [13][1500/5005]	Time 0.594 (0.595)	Data 0.000 (0.002)	Loss 1.3652 (1.3249)	Acc@1 65.234 (68.097)	Acc@5 87.109 (86.877)
+Epoch: [13][2000/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.3209 (1.3245)	Acc@1 69.141 (68.106)	Acc@5 86.719 (86.919)
+Epoch: [13][2500/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.1609 (1.3252)	Acc@1 70.312 (68.079)	Acc@5 87.891 (86.905)
+Epoch: [13][3000/5005]	Time 0.597 (0.594)	Data 0.000 (0.002)	Loss 1.3287 (1.3248)	Acc@1 68.750 (68.093)	Acc@5 87.109 (86.903)
+Epoch: [13][3500/5005]	Time 0.593 (0.594)	Data 0.000 (0.002)	Loss 1.2575 (1.3242)	Acc@1 71.484 (68.099)	Acc@5 87.500 (86.904)
+Epoch: [13][4000/5005]	Time 0.596 (0.594)	Data 0.000 (0.001)	Loss 1.4396 (1.3262)	Acc@1 66.016 (68.065)	Acc@5 84.375 (86.871)
+Epoch: [13][4500/5005]	Time 0.596 (0.594)	Data 0.000 (0.001)	Loss 1.0432 (1.3266)	Acc@1 70.703 (68.061)	Acc@5 93.750 (86.854)
+Epoch: [13][5000/5005]	Time 0.601 (0.594)	Data 0.000 (0.001)	Loss 1.3976 (1.3265)	Acc@1 66.797 (68.076)	Acc@5 86.719 (86.862)
+Test: [0/196]	Time 1.625 (1.625)	Loss 0.6293 (0.6293)	Acc@1 83.984 (83.984)	Acc@5 96.484 (96.484)
+ * Acc@1 70.768 Acc@5 89.982
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0137, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.6115e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.2265e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [14][0/5005]	Time 2.144 (2.144)	Data 1.928 (1.928)	Loss 1.2971 (1.2971)	Acc@1 69.531 (69.531)	Acc@5 87.500 (87.500)
+Epoch: [14][500/5005]	Time 0.594 (0.598)	Data 0.000 (0.005)	Loss 1.5115 (1.3310)	Acc@1 65.625 (67.874)	Acc@5 83.594 (86.727)
+Epoch: [14][1000/5005]	Time 0.595 (0.597)	Data 0.000 (0.003)	Loss 1.2587 (1.3239)	Acc@1 67.578 (68.058)	Acc@5 87.109 (86.881)
+Epoch: [14][1500/5005]	Time 0.595 (0.596)	Data 0.000 (0.002)	Loss 1.3369 (1.3273)	Acc@1 68.750 (67.960)	Acc@5 86.719 (86.815)
+Epoch: [14][2000/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.3792 (1.3267)	Acc@1 64.844 (67.999)	Acc@5 83.594 (86.848)
+Epoch: [14][2500/5005]	Time 0.595 (0.595)	Data 0.000 (0.002)	Loss 1.4026 (1.3262)	Acc@1 66.016 (68.008)	Acc@5 85.938 (86.865)
+Epoch: [14][3000/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.3168 (1.3261)	Acc@1 70.703 (68.017)	Acc@5 86.328 (86.864)
+Epoch: [14][3500/5005]	Time 0.594 (0.595)	Data 0.000 (0.002)	Loss 1.4203 (1.3269)	Acc@1 68.359 (68.037)	Acc@5 86.719 (86.863)
+Epoch: [14][4000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.3890 (1.3263)	Acc@1 67.188 (68.038)	Acc@5 85.156 (86.875)
+Epoch: [14][4500/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.3867 (1.3261)	Acc@1 66.406 (68.034)	Acc@5 83.594 (86.885)
+Epoch: [14][5000/5005]	Time 0.593 (0.595)	Data 0.000 (0.001)	Loss 1.2210 (1.3266)	Acc@1 66.406 (68.026)	Acc@5 90.234 (86.876)
+Test: [0/196]	Time 1.544 (1.544)	Loss 0.6127 (0.6127)	Acc@1 83.203 (83.203)	Acc@5 96.875 (96.875)
+ * Acc@1 70.824 Acc@5 89.958
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0137, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.5272e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.1951e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [15][0/5005]	Time 2.218 (2.218)	Data 2.009 (2.009)	Loss 1.3919 (1.3919)	Acc@1 64.453 (64.453)	Acc@5 87.500 (87.500)
+Epoch: [15][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.3011 (1.3207)	Acc@1 66.016 (68.207)	Acc@5 87.500 (86.936)
+Epoch: [15][1000/5005]	Time 0.599 (0.596)	Data 0.000 (0.003)	Loss 1.0543 (1.3241)	Acc@1 75.000 (68.120)	Acc@5 90.234 (86.904)
+Epoch: [15][1500/5005]	Time 0.596 (0.596)	Data 0.000 (0.002)	Loss 1.2747 (1.3259)	Acc@1 68.750 (68.104)	Acc@5 88.281 (86.871)
+Epoch: [15][2000/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.3391 (1.3255)	Acc@1 67.578 (68.117)	Acc@5 89.062 (86.901)
+Epoch: [15][2500/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.1682 (1.3274)	Acc@1 70.703 (68.060)	Acc@5 88.672 (86.883)
+Epoch: [15][3000/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.1600 (1.3272)	Acc@1 73.047 (68.032)	Acc@5 88.281 (86.886)
+Epoch: [15][3500/5005]	Time 0.595 (0.594)	Data 0.000 (0.002)	Loss 1.2558 (1.3259)	Acc@1 68.750 (68.055)	Acc@5 86.719 (86.909)
+Epoch: [15][4000/5005]	Time 0.598 (0.594)	Data 0.000 (0.001)	Loss 1.4905 (1.3259)	Acc@1 64.453 (68.027)	Acc@5 85.156 (86.893)
+Epoch: [15][4500/5005]	Time 0.595 (0.594)	Data 0.000 (0.001)	Loss 1.1431 (1.3261)	Acc@1 70.703 (68.031)	Acc@5 91.797 (86.891)
+Epoch: [15][5000/5005]	Time 0.595 (0.594)	Data 0.000 (0.001)	Loss 1.2123 (1.3263)	Acc@1 72.656 (68.035)	Acc@5 90.234 (86.883)
+Test: [0/196]	Time 1.576 (1.576)	Loss 0.6332 (0.6332)	Acc@1 83.203 (83.203)	Acc@5 96.875 (96.875)
+ * Acc@1 70.822 Acc@5 89.948
+weight information for regulizer based pretrain
+[tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0136, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.4438e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.1641e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [16][0/5005]	Time 2.220 (2.220)	Data 1.998 (1.998)	Loss 1.2346 (1.2346)	Acc@1 73.047 (73.047)	Acc@5 88.281 (88.281)
+Epoch: [16][500/5005]	Time 0.600 (0.599)	Data 0.000 (0.005)	Loss 1.2460 (1.3284)	Acc@1 68.750 (68.048)	Acc@5 86.719 (86.858)
+Epoch: [16][1000/5005]	Time 0.601 (0.598)	Data 0.000 (0.003)	Loss 1.2926 (1.3244)	Acc@1 69.922 (68.100)	Acc@5 88.672 (86.956)
+Epoch: [16][1500/5005]	Time 0.599 (0.597)	Data 0.000 (0.002)	Loss 1.2735 (1.3276)	Acc@1 67.188 (68.046)	Acc@5 87.500 (86.878)
+Epoch: [16][2000/5005]	Time 0.599 (0.596)	Data 0.000 (0.002)	Loss 1.4845 (1.3276)	Acc@1 66.406 (68.068)	Acc@5 84.766 (86.886)
+Epoch: [16][2500/5005]	Time 0.599 (0.596)	Data 0.000 (0.002)	Loss 1.3906 (1.3275)	Acc@1 66.406 (68.061)	Acc@5 87.891 (86.907)
+Epoch: [16][3000/5005]	Time 0.591 (0.596)	Data 0.000 (0.002)	Loss 1.1940 (1.3258)	Acc@1 68.359 (68.078)	Acc@5 88.281 (86.932)
+Epoch: [16][3500/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.4549 (1.3266)	Acc@1 65.234 (68.062)	Acc@5 85.938 (86.930)
+Epoch: [16][4000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.3179 (1.3271)	Acc@1 67.578 (68.037)	Acc@5 88.281 (86.913)
+Epoch: [16][4500/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.5230 (1.3271)	Acc@1 66.016 (68.051)	Acc@5 84.375 (86.906)
+Epoch: [16][5000/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.4900 (1.3278)	Acc@1 63.672 (68.036)	Acc@5 85.938 (86.898)
+Test: [0/196]	Time 1.544 (1.544)	Loss 0.6068 (0.6068)	Acc@1 83.594 (83.594)	Acc@5 97.656 (97.656)
+ * Acc@1 70.778 Acc@5 89.962
+weight information for regulizer based pretrain
+[tensor(0.0036, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0073, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0135, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.3612e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.1334e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [17][0/5005]	Time 2.066 (2.066)	Data 1.856 (1.856)	Loss 1.2686 (1.2686)	Acc@1 69.141 (69.141)	Acc@5 87.500 (87.500)
+Epoch: [17][500/5005]	Time 0.596 (0.598)	Data 0.000 (0.005)	Loss 1.2966 (1.3273)	Acc@1 69.922 (68.117)	Acc@5 86.328 (86.872)
+Epoch: [17][1000/5005]	Time 0.600 (0.596)	Data 0.000 (0.003)	Loss 1.2685 (1.3267)	Acc@1 69.922 (68.107)	Acc@5 87.891 (86.890)
+Epoch: [17][1500/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.2400 (1.3253)	Acc@1 69.922 (68.112)	Acc@5 89.062 (86.908)
+Epoch: [17][2000/5005]	Time 0.600 (0.595)	Data 0.000 (0.002)	Loss 1.2082 (1.3264)	Acc@1 70.312 (68.098)	Acc@5 88.672 (86.899)
+Epoch: [17][2500/5005]	Time 0.592 (0.594)	Data 0.000 (0.002)	Loss 1.2722 (1.3288)	Acc@1 69.531 (68.052)	Acc@5 88.672 (86.870)
+Epoch: [17][3000/5005]	Time 0.590 (0.594)	Data 0.000 (0.002)	Loss 1.2923 (1.3289)	Acc@1 69.141 (68.081)	Acc@5 87.109 (86.876)
+Epoch: [17][3500/5005]	Time 0.590 (0.594)	Data 0.000 (0.002)	Loss 1.2291 (1.3277)	Acc@1 71.484 (68.090)	Acc@5 89.062 (86.894)
+Epoch: [17][4000/5005]	Time 0.593 (0.594)	Data 0.000 (0.001)	Loss 1.5689 (1.3277)	Acc@1 62.109 (68.064)	Acc@5 83.984 (86.901)
+Epoch: [17][4500/5005]	Time 0.596 (0.594)	Data 0.000 (0.001)	Loss 1.4060 (1.3281)	Acc@1 64.453 (68.057)	Acc@5 87.109 (86.883)
+Epoch: [17][5000/5005]	Time 0.591 (0.593)	Data 0.000 (0.001)	Loss 1.1422 (1.3282)	Acc@1 68.359 (68.044)	Acc@5 90.234 (86.884)
+Test: [0/196]	Time 1.590 (1.590)	Loss 0.6325 (0.6325)	Acc@1 83.594 (83.594)	Acc@5 96.484 (96.484)
+ * Acc@1 70.714 Acc@5 89.866
+weight information for regulizer based pretrain
+[tensor(0.0036, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0073, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0135, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.2795e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.1030e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [18][0/5005]	Time 2.065 (2.065)	Data 1.852 (1.852)	Loss 1.2411 (1.2411)	Acc@1 68.750 (68.750)	Acc@5 87.500 (87.500)
+Epoch: [18][500/5005]	Time 0.588 (0.598)	Data 0.000 (0.005)	Loss 1.2697 (1.3183)	Acc@1 71.484 (67.974)	Acc@5 89.062 (86.956)
+Epoch: [18][1000/5005]	Time 0.591 (0.597)	Data 0.000 (0.003)	Loss 1.3047 (1.3228)	Acc@1 69.141 (68.009)	Acc@5 86.719 (86.892)
+Epoch: [18][1500/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.3578 (1.3240)	Acc@1 69.141 (68.036)	Acc@5 85.938 (86.863)
+Epoch: [18][2000/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.3779 (1.3242)	Acc@1 66.406 (68.056)	Acc@5 88.281 (86.853)
+Epoch: [18][2500/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.2135 (1.3251)	Acc@1 69.922 (68.063)	Acc@5 87.109 (86.842)
+Epoch: [18][3000/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.3834 (1.3262)	Acc@1 66.406 (68.043)	Acc@5 86.719 (86.828)
+Epoch: [18][3500/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.1766 (1.3266)	Acc@1 71.484 (68.035)	Acc@5 87.891 (86.826)
+Epoch: [18][4000/5005]	Time 0.596 (0.594)	Data 0.000 (0.001)	Loss 1.4476 (1.3286)	Acc@1 67.578 (67.991)	Acc@5 85.156 (86.814)
+Epoch: [18][4500/5005]	Time 0.590 (0.594)	Data 0.000 (0.001)	Loss 1.2533 (1.3283)	Acc@1 67.578 (67.997)	Acc@5 87.891 (86.836)
+Epoch: [18][5000/5005]	Time 0.597 (0.594)	Data 0.000 (0.001)	Loss 1.4826 (1.3285)	Acc@1 62.891 (67.994)	Acc@5 85.938 (86.832)
+Test: [0/196]	Time 1.544 (1.544)	Loss 0.6069 (0.6069)	Acc@1 85.547 (85.547)	Acc@5 95.703 (95.703)
+ * Acc@1 70.680 Acc@5 89.862
+weight information for regulizer based pretrain
+[tensor(0.0036, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0073, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0134, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.1986e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.0730e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [19][0/5005]	Time 2.278 (2.278)	Data 2.069 (2.069)	Loss 1.5221 (1.5221)	Acc@1 67.578 (67.578)	Acc@5 82.422 (82.422)
+Epoch: [19][500/5005]	Time 0.599 (0.598)	Data 0.000 (0.005)	Loss 1.3581 (1.3271)	Acc@1 68.750 (67.957)	Acc@5 89.062 (86.848)
+Epoch: [19][1000/5005]	Time 0.599 (0.597)	Data 0.000 (0.003)	Loss 1.2896 (1.3249)	Acc@1 70.312 (68.003)	Acc@5 85.938 (86.937)
+Epoch: [19][1500/5005]	Time 0.599 (0.596)	Data 0.000 (0.002)	Loss 1.1767 (1.3230)	Acc@1 68.750 (68.026)	Acc@5 86.328 (86.961)
+Epoch: [19][2000/5005]	Time 0.597 (0.596)	Data 0.000 (0.002)	Loss 1.4935 (1.3239)	Acc@1 63.281 (68.017)	Acc@5 85.547 (86.948)
+Epoch: [19][2500/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.5124 (1.3246)	Acc@1 61.328 (68.007)	Acc@5 83.594 (86.940)
+Epoch: [19][3000/5005]	Time 0.596 (0.595)	Data 0.000 (0.002)	Loss 1.1800 (1.3242)	Acc@1 69.922 (68.011)	Acc@5 91.016 (86.946)
+Epoch: [19][3500/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.1469 (1.3256)	Acc@1 71.484 (68.003)	Acc@5 89.062 (86.926)
+Epoch: [19][4000/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.2863 (1.3258)	Acc@1 71.094 (68.017)	Acc@5 87.891 (86.923)
+Epoch: [19][4500/5005]	Time 0.591 (0.595)	Data 0.000 (0.001)	Loss 1.3704 (1.3264)	Acc@1 67.578 (68.029)	Acc@5 85.938 (86.919)
+Epoch: [19][5000/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.5059 (1.3267)	Acc@1 64.062 (68.024)	Acc@5 85.156 (86.915)
+Test: [0/196]	Time 1.676 (1.676)	Loss 0.6032 (0.6032)	Acc@1 84.766 (84.766)	Acc@5 96.875 (96.875)
+ * Acc@1 70.784 Acc@5 89.898
+weight information for regulizer based pretrain
+[tensor(0.0036, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0133, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.1186e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.0432e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [20][0/5005]	Time 2.241 (2.241)	Data 2.032 (2.032)	Loss 1.4740 (1.4740)	Acc@1 66.016 (66.016)	Acc@5 85.938 (85.938)
+Epoch: [20][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.4538 (1.3229)	Acc@1 67.188 (68.167)	Acc@5 87.500 (86.902)
+Epoch: [20][1000/5005]	Time 0.591 (0.597)	Data 0.000 (0.003)	Loss 1.3821 (1.3270)	Acc@1 68.750 (67.999)	Acc@5 85.156 (86.844)
+Epoch: [20][1500/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.4343 (1.3291)	Acc@1 66.797 (67.986)	Acc@5 82.422 (86.829)
+Epoch: [20][2000/5005]	Time 0.595 (0.596)	Data 0.000 (0.002)	Loss 1.2344 (1.3275)	Acc@1 69.141 (68.023)	Acc@5 89.062 (86.849)
+Epoch: [20][2500/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.0798 (1.3274)	Acc@1 69.922 (68.017)	Acc@5 92.578 (86.863)
+Epoch: [20][3000/5005]	Time 0.590 (0.596)	Data 0.000 (0.002)	Loss 1.6560 (1.3277)	Acc@1 66.016 (68.031)	Acc@5 83.594 (86.859)
+Epoch: [20][3500/5005]	Time 0.591 (0.596)	Data 0.000 (0.002)	Loss 1.3611 (1.3284)	Acc@1 67.969 (68.007)	Acc@5 84.766 (86.853)
+Epoch: [20][4000/5005]	Time 0.591 (0.596)	Data 0.000 (0.001)	Loss 1.2649 (1.3292)	Acc@1 69.531 (67.986)	Acc@5 88.281 (86.848)
+Epoch: [20][4500/5005]	Time 0.597 (0.595)	Data 0.000 (0.001)	Loss 1.3971 (1.3293)	Acc@1 66.797 (67.990)	Acc@5 86.328 (86.840)
+Epoch: [20][5000/5005]	Time 0.592 (0.595)	Data 0.000 (0.001)	Loss 1.3388 (1.3289)	Acc@1 71.484 (67.991)	Acc@5 84.766 (86.842)
+Test: [0/196]	Time 1.529 (1.529)	Loss 0.6202 (0.6202)	Acc@1 84.375 (84.375)	Acc@5 96.094 (96.094)
+ * Acc@1 70.760 Acc@5 89.902
+weight information for regulizer based pretrain
+[tensor(0.0036, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0133, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(8.0394e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(3.0137e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [21][0/5005]	Time 2.236 (2.236)	Data 2.020 (2.020)	Loss 1.3762 (1.3762)	Acc@1 66.406 (66.406)	Acc@5 87.891 (87.891)
+Epoch: [21][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.3790 (1.3325)	Acc@1 67.188 (67.908)	Acc@5 85.547 (86.900)
+Epoch: [21][1000/5005]	Time 0.587 (0.596)	Data 0.000 (0.003)	Loss 1.2020 (1.3300)	Acc@1 73.047 (68.018)	Acc@5 86.328 (86.876)
+Epoch: [21][1500/5005]	Time 0.596 (0.596)	Data 0.000 (0.002)	Loss 1.3423 (1.3277)	Acc@1 66.797 (68.046)	Acc@5 87.891 (86.850)
+Epoch: [21][2000/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.3440 (1.3278)	Acc@1 68.359 (68.048)	Acc@5 85.547 (86.881)
+Epoch: [21][2500/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.1791 (1.3278)	Acc@1 70.312 (68.037)	Acc@5 91.406 (86.900)
+Epoch: [21][3000/5005]	Time 0.590 (0.595)	Data 0.000 (0.002)	Loss 1.3291 (1.3284)	Acc@1 68.359 (68.039)	Acc@5 86.719 (86.893)
+Epoch: [21][3500/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.2957 (1.3289)	Acc@1 68.750 (68.009)	Acc@5 85.938 (86.891)
+Epoch: [21][4000/5005]	Time 0.595 (0.595)	Data 0.000 (0.001)	Loss 1.4666 (1.3271)	Acc@1 64.453 (68.054)	Acc@5 86.719 (86.911)
+Epoch: [21][4500/5005]	Time 0.595 (0.595)	Data 0.000 (0.001)	Loss 1.4623 (1.3275)	Acc@1 63.672 (68.035)	Acc@5 85.156 (86.900)
+Epoch: [21][5000/5005]	Time 0.595 (0.595)	Data 0.000 (0.001)	Loss 1.3185 (1.3285)	Acc@1 68.359 (68.008)	Acc@5 85.547 (86.877)
+Test: [0/196]	Time 1.540 (1.540)	Loss 0.6374 (0.6374)	Acc@1 83.594 (83.594)	Acc@5 96.094 (96.094)
+ * Acc@1 70.742 Acc@5 89.880
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0132, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.9610e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.9846e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(0.0001, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [22][0/5005]	Time 2.309 (2.309)	Data 2.096 (2.096)	Loss 1.4603 (1.4603)	Acc@1 64.453 (64.453)	Acc@5 84.375 (84.375)
+Epoch: [22][500/5005]	Time 0.596 (0.599)	Data 0.000 (0.005)	Loss 1.4800 (1.3340)	Acc@1 64.453 (67.935)	Acc@5 83.984 (86.851)
+Epoch: [22][1000/5005]	Time 0.598 (0.597)	Data 0.000 (0.003)	Loss 1.2297 (1.3291)	Acc@1 68.750 (68.032)	Acc@5 87.109 (86.887)
+Epoch: [22][1500/5005]	Time 0.591 (0.596)	Data 0.000 (0.002)	Loss 1.2259 (1.3292)	Acc@1 72.266 (68.021)	Acc@5 87.891 (86.883)
+Epoch: [22][2000/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.1774 (1.3283)	Acc@1 70.703 (68.012)	Acc@5 88.672 (86.886)
+Epoch: [22][2500/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.3236 (1.3276)	Acc@1 69.531 (68.026)	Acc@5 88.672 (86.892)
+Epoch: [22][3000/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.4564 (1.3297)	Acc@1 62.109 (67.995)	Acc@5 85.156 (86.861)
+Epoch: [22][3500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.4975 (1.3307)	Acc@1 67.578 (67.975)	Acc@5 84.375 (86.844)
+Epoch: [22][4000/5005]	Time 0.620 (0.595)	Data 0.000 (0.001)	Loss 1.1561 (1.3309)	Acc@1 68.359 (67.968)	Acc@5 88.672 (86.834)
+Epoch: [22][4500/5005]	Time 0.589 (0.595)	Data 0.000 (0.001)	Loss 1.3897 (1.3309)	Acc@1 68.750 (67.969)	Acc@5 85.547 (86.823)
+Epoch: [22][5000/5005]	Time 0.604 (0.594)	Data 0.000 (0.001)	Loss 1.6804 (1.3310)	Acc@1 58.984 (67.971)	Acc@5 78.516 (86.821)
+Test: [0/196]	Time 1.528 (1.528)	Loss 0.6092 (0.6092)	Acc@1 84.766 (84.766)	Acc@5 97.266 (97.266)
+ * Acc@1 70.758 Acc@5 89.874
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0132, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.8834e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.9558e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.9374e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [23][0/5005]	Time 2.222 (2.222)	Data 2.007 (2.007)	Loss 1.4947 (1.4947)	Acc@1 63.672 (63.672)	Acc@5 85.547 (85.547)
+Epoch: [23][500/5005]	Time 0.593 (0.599)	Data 0.000 (0.005)	Loss 1.2512 (1.3237)	Acc@1 69.922 (68.103)	Acc@5 86.328 (86.903)
+Epoch: [23][1000/5005]	Time 0.593 (0.597)	Data 0.000 (0.003)	Loss 1.2039 (1.3256)	Acc@1 71.094 (68.075)	Acc@5 88.672 (86.917)
+Epoch: [23][1500/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.2464 (1.3254)	Acc@1 67.188 (68.139)	Acc@5 89.453 (86.907)
+Epoch: [23][2000/5005]	Time 0.598 (0.596)	Data 0.000 (0.002)	Loss 1.6209 (1.3254)	Acc@1 63.281 (68.102)	Acc@5 85.938 (86.890)
+Epoch: [23][2500/5005]	Time 0.600 (0.596)	Data 0.000 (0.002)	Loss 1.4196 (1.3273)	Acc@1 66.016 (68.040)	Acc@5 88.281 (86.871)
+Epoch: [23][3000/5005]	Time 0.591 (0.596)	Data 0.000 (0.002)	Loss 1.4168 (1.3282)	Acc@1 62.891 (68.018)	Acc@5 87.891 (86.863)
+Epoch: [23][3500/5005]	Time 0.599 (0.595)	Data 0.000 (0.002)	Loss 1.4480 (1.3279)	Acc@1 65.625 (68.029)	Acc@5 83.984 (86.859)
+Epoch: [23][4000/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.0465 (1.3297)	Acc@1 75.000 (68.007)	Acc@5 88.281 (86.843)
+Epoch: [23][4500/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.1862 (1.3295)	Acc@1 69.141 (68.001)	Acc@5 89.062 (86.845)
+Epoch: [23][5000/5005]	Time 0.592 (0.595)	Data 0.000 (0.001)	Loss 1.5157 (1.3295)	Acc@1 65.625 (67.985)	Acc@5 85.938 (86.848)
+Test: [0/196]	Time 1.559 (1.559)	Loss 0.6412 (0.6412)	Acc@1 83.594 (83.594)	Acc@5 96.484 (96.484)
+ * Acc@1 70.660 Acc@5 89.890
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0131, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.8066e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.9273e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.8411e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [24][0/5005]	Time 2.194 (2.194)	Data 1.977 (1.977)	Loss 1.3842 (1.3842)	Acc@1 64.453 (64.453)	Acc@5 86.719 (86.719)
+Epoch: [24][500/5005]	Time 0.594 (0.599)	Data 0.000 (0.005)	Loss 1.1881 (1.3286)	Acc@1 72.656 (67.786)	Acc@5 86.719 (86.932)
+Epoch: [24][1000/5005]	Time 0.598 (0.597)	Data 0.000 (0.003)	Loss 1.5435 (1.3264)	Acc@1 67.578 (67.938)	Acc@5 82.812 (86.930)
+Epoch: [24][1500/5005]	Time 0.598 (0.596)	Data 0.000 (0.002)	Loss 1.1329 (1.3260)	Acc@1 72.656 (67.967)	Acc@5 87.891 (86.951)
+Epoch: [24][2000/5005]	Time 0.600 (0.596)	Data 0.000 (0.002)	Loss 1.2775 (1.3255)	Acc@1 69.141 (68.011)	Acc@5 89.844 (86.961)
+Epoch: [24][2500/5005]	Time 0.593 (0.596)	Data 0.000 (0.002)	Loss 1.2258 (1.3280)	Acc@1 71.094 (67.955)	Acc@5 87.109 (86.928)
+Epoch: [24][3000/5005]	Time 0.595 (0.596)	Data 0.000 (0.002)	Loss 1.6639 (1.3301)	Acc@1 67.188 (67.922)	Acc@5 83.984 (86.897)
+Epoch: [24][3500/5005]	Time 0.592 (0.596)	Data 0.000 (0.002)	Loss 1.1298 (1.3294)	Acc@1 73.438 (67.926)	Acc@5 89.844 (86.906)
+Epoch: [24][4000/5005]	Time 0.598 (0.596)	Data 0.000 (0.001)	Loss 1.3377 (1.3290)	Acc@1 66.406 (67.947)	Acc@5 87.109 (86.896)
+Epoch: [24][4500/5005]	Time 0.599 (0.596)	Data 0.000 (0.001)	Loss 1.1004 (1.3293)	Acc@1 73.047 (67.947)	Acc@5 90.234 (86.879)
+Epoch: [24][5000/5005]	Time 0.595 (0.596)	Data 0.000 (0.001)	Loss 1.3531 (1.3301)	Acc@1 66.406 (67.941)	Acc@5 85.547 (86.876)
+Test: [0/196]	Time 1.570 (1.570)	Loss 0.6501 (0.6501)	Acc@1 83.203 (83.203)	Acc@5 96.094 (96.094)
+ * Acc@1 70.632 Acc@5 89.838
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0130, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.7306e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.8990e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.7458e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [25][0/5005]	Time 2.394 (2.394)	Data 2.183 (2.183)	Loss 1.5975 (1.5975)	Acc@1 62.891 (62.891)	Acc@5 81.250 (81.250)
+Epoch: [25][500/5005]	Time 0.599 (0.600)	Data 0.000 (0.005)	Loss 1.5037 (1.3299)	Acc@1 64.844 (67.825)	Acc@5 84.375 (86.739)
+Epoch: [25][1000/5005]	Time 0.600 (0.598)	Data 0.000 (0.003)	Loss 1.3007 (1.3261)	Acc@1 68.359 (67.945)	Acc@5 87.109 (86.850)
+Epoch: [25][1500/5005]	Time 0.597 (0.597)	Data 0.000 (0.002)	Loss 1.5638 (1.3306)	Acc@1 62.109 (67.894)	Acc@5 85.156 (86.777)
+Epoch: [25][2000/5005]	Time 0.600 (0.597)	Data 0.000 (0.002)	Loss 1.1840 (1.3315)	Acc@1 71.875 (67.896)	Acc@5 88.672 (86.792)
+Epoch: [25][2500/5005]	Time 0.611 (0.597)	Data 0.000 (0.002)	Loss 1.1372 (1.3318)	Acc@1 74.219 (67.869)	Acc@5 87.891 (86.806)
+Epoch: [25][3000/5005]	Time 0.597 (0.597)	Data 0.000 (0.002)	Loss 1.3164 (1.3319)	Acc@1 68.359 (67.884)	Acc@5 89.062 (86.816)
+Epoch: [25][3500/5005]	Time 0.591 (0.597)	Data 0.000 (0.002)	Loss 1.2761 (1.3310)	Acc@1 67.969 (67.931)	Acc@5 88.281 (86.829)
+Epoch: [25][4000/5005]	Time 0.598 (0.597)	Data 0.000 (0.002)	Loss 1.4724 (1.3299)	Acc@1 64.844 (67.940)	Acc@5 85.938 (86.853)
+Epoch: [25][4500/5005]	Time 0.594 (0.596)	Data 0.000 (0.001)	Loss 1.3652 (1.3306)	Acc@1 67.188 (67.928)	Acc@5 87.109 (86.850)
+Epoch: [25][5000/5005]	Time 0.598 (0.596)	Data 0.000 (0.001)	Loss 1.3016 (1.3311)	Acc@1 68.359 (67.933)	Acc@5 88.672 (86.842)
+Test: [0/196]	Time 1.534 (1.534)	Loss 0.6440 (0.6440)	Acc@1 82.422 (82.422)	Acc@5 96.094 (96.094)
+ * Acc@1 70.518 Acc@5 89.854
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0070, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0130, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.6554e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.8711e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.6514e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [26][0/5005]	Time 2.095 (2.095)	Data 1.877 (1.877)	Loss 1.2498 (1.2498)	Acc@1 70.703 (70.703)	Acc@5 85.156 (85.156)
+Epoch: [26][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.3646 (1.3169)	Acc@1 67.969 (68.274)	Acc@5 88.672 (87.032)
+Epoch: [26][1000/5005]	Time 0.594 (0.596)	Data 0.000 (0.003)	Loss 1.3978 (1.3224)	Acc@1 68.750 (68.197)	Acc@5 84.375 (86.920)
+Epoch: [26][1500/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.3028 (1.3235)	Acc@1 69.922 (68.153)	Acc@5 89.062 (86.915)
+Epoch: [26][2000/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.2431 (1.3254)	Acc@1 68.750 (68.092)	Acc@5 87.500 (86.924)
+Epoch: [26][2500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.4422 (1.3277)	Acc@1 65.234 (68.031)	Acc@5 82.812 (86.887)
+Epoch: [26][3000/5005]	Time 0.594 (0.595)	Data 0.000 (0.002)	Loss 1.4971 (1.3262)	Acc@1 62.500 (68.050)	Acc@5 85.156 (86.897)
+Epoch: [26][3500/5005]	Time 0.597 (0.595)	Data 0.000 (0.002)	Loss 1.3955 (1.3285)	Acc@1 65.234 (68.004)	Acc@5 85.938 (86.868)
+Epoch: [26][4000/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.4667 (1.3294)	Acc@1 62.891 (67.974)	Acc@5 85.547 (86.853)
+Epoch: [26][4500/5005]	Time 0.596 (0.595)	Data 0.000 (0.001)	Loss 1.2186 (1.3310)	Acc@1 73.438 (67.956)	Acc@5 86.719 (86.835)
+Epoch: [26][5000/5005]	Time 0.593 (0.595)	Data 0.000 (0.001)	Loss 1.1957 (1.3312)	Acc@1 71.094 (67.950)	Acc@5 89.062 (86.836)
+Test: [0/196]	Time 1.546 (1.546)	Loss 0.6472 (0.6472)	Acc@1 82.812 (82.812)	Acc@5 95.703 (95.703)
+ * Acc@1 70.744 Acc@5 89.890
+weight information for regulizer based pretrain
+[tensor(0.0035, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0070, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0129, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.5809e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.8435e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.5581e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [27][0/5005]	Time 2.082 (2.082)	Data 1.869 (1.869)	Loss 1.3926 (1.3926)	Acc@1 66.016 (66.016)	Acc@5 85.156 (85.156)
+Epoch: [27][500/5005]	Time 0.597 (0.598)	Data 0.000 (0.005)	Loss 1.3843 (1.3374)	Acc@1 68.750 (67.805)	Acc@5 84.375 (86.659)
+Epoch: [27][1000/5005]	Time 0.595 (0.597)	Data 0.000 (0.003)	Loss 1.1683 (1.3295)	Acc@1 66.797 (67.943)	Acc@5 89.453 (86.812)
+Epoch: [27][1500/5005]	Time 0.596 (0.596)	Data 0.000 (0.002)	Loss 1.1788 (1.3304)	Acc@1 71.094 (67.947)	Acc@5 88.281 (86.799)
+Epoch: [27][2000/5005]	Time 0.592 (0.595)	Data 0.000 (0.002)	Loss 1.4727 (1.3298)	Acc@1 64.062 (67.947)	Acc@5 84.375 (86.812)
+Epoch: [27][2500/5005]	Time 0.599 (0.595)	Data 0.000 (0.002)	Loss 1.3621 (1.3312)	Acc@1 68.750 (67.933)	Acc@5 85.156 (86.798)
+Epoch: [27][3000/5005]	Time 0.602 (0.595)	Data 0.000 (0.002)	Loss 1.4896 (1.3305)	Acc@1 62.500 (67.951)	Acc@5 81.250 (86.805)
+Epoch: [27][3500/5005]	Time 0.599 (0.595)	Data 0.000 (0.002)	Loss 1.2152 (1.3307)	Acc@1 69.531 (67.934)	Acc@5 87.891 (86.812)
+Epoch: [27][4000/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.4370 (1.3320)	Acc@1 64.062 (67.923)	Acc@5 83.984 (86.798)
+Epoch: [27][4500/5005]	Time 0.601 (0.595)	Data 0.000 (0.001)	Loss 1.2717 (1.3327)	Acc@1 67.578 (67.924)	Acc@5 86.328 (86.800)
+Epoch: [27][5000/5005]	Time 0.592 (0.595)	Data 0.000 (0.001)	Loss 1.1904 (1.3328)	Acc@1 73.438 (67.924)	Acc@5 89.844 (86.798)
+Test: [0/196]	Time 1.511 (1.511)	Loss 0.6374 (0.6374)	Acc@1 82.812 (82.812)	Acc@5 96.484 (96.484)
+ * Acc@1 70.488 Acc@5 89.836
+weight information for regulizer based pretrain
+[tensor(0.0034, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0070, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0128, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.5073e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.8161e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.4658e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [28][0/5005]	Time 2.220 (2.220)	Data 2.007 (2.007)	Loss 1.3277 (1.3277)	Acc@1 66.406 (66.406)	Acc@5 87.891 (87.891)
+Epoch: [28][500/5005]	Time 0.594 (0.599)	Data 0.000 (0.005)	Loss 1.1472 (1.3325)	Acc@1 71.484 (68.005)	Acc@5 89.062 (86.794)
+Epoch: [28][1000/5005]	Time 0.594 (0.597)	Data 0.000 (0.003)	Loss 1.1961 (1.3310)	Acc@1 68.359 (67.929)	Acc@5 89.453 (86.812)
+Epoch: [28][1500/5005]	Time 0.597 (0.597)	Data 0.000 (0.002)	Loss 1.2742 (1.3296)	Acc@1 68.750 (67.991)	Acc@5 87.891 (86.838)
+Epoch: [28][2000/5005]	Time 0.594 (0.596)	Data 0.000 (0.002)	Loss 1.2436 (1.3310)	Acc@1 70.312 (67.960)	Acc@5 88.281 (86.814)
+Epoch: [28][2500/5005]	Time 0.599 (0.596)	Data 0.000 (0.002)	Loss 1.2812 (1.3326)	Acc@1 66.406 (67.924)	Acc@5 88.281 (86.801)
+Epoch: [28][3000/5005]	Time 0.586 (0.596)	Data 0.000 (0.002)	Loss 1.2484 (1.3318)	Acc@1 67.969 (67.925)	Acc@5 85.938 (86.825)
+Epoch: [28][3500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.2892 (1.3323)	Acc@1 67.969 (67.939)	Acc@5 88.281 (86.831)
+Epoch: [28][4000/5005]	Time 0.593 (0.595)	Data 0.000 (0.001)	Loss 1.2254 (1.3333)	Acc@1 66.797 (67.916)	Acc@5 86.719 (86.800)
+Epoch: [28][4500/5005]	Time 0.594 (0.595)	Data 0.000 (0.001)	Loss 1.1921 (1.3330)	Acc@1 71.875 (67.927)	Acc@5 88.672 (86.802)
+Epoch: [28][5000/5005]	Time 0.593 (0.595)	Data 0.000 (0.001)	Loss 1.2081 (1.3334)	Acc@1 70.703 (67.930)	Acc@5 88.281 (86.793)
+Test: [0/196]	Time 1.531 (1.531)	Loss 0.6250 (0.6250)	Acc@1 83.203 (83.203)	Acc@5 95.312 (95.312)
+ * Acc@1 70.620 Acc@5 89.850
+weight information for regulizer based pretrain
+[tensor(0.0034, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0069, device='cuda:0', grad_fn=<MeanBackward1>), tensor(0.0128, device='cuda:0', grad_fn=<MeanBackward1>)] [tensor(7.4343e-06, device='cuda:0', grad_fn=<VarBackward0>), tensor(2.7891e-05, device='cuda:0', grad_fn=<VarBackward0>), tensor(9.3745e-05, device='cuda:0', grad_fn=<VarBackward0>)]
+Epoch: [29][0/5005]	Time 2.267 (2.267)	Data 2.050 (2.050)	Loss 1.2289 (1.2289)	Acc@1 68.359 (68.359)	Acc@5 87.109 (87.109)
+Epoch: [29][500/5005]	Time 0.600 (0.599)	Data 0.000 (0.005)	Loss 1.2595 (1.3219)	Acc@1 71.094 (68.093)	Acc@5 86.719 (86.986)
+Epoch: [29][1000/5005]	Time 0.594 (0.596)	Data 0.000 (0.003)	Loss 1.2572 (1.3266)	Acc@1 70.312 (68.020)	Acc@5 84.766 (86.858)
+Epoch: [29][1500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.0895 (1.3284)	Acc@1 73.047 (68.028)	Acc@5 91.797 (86.824)
+Epoch: [29][2000/5005]	Time 0.591 (0.595)	Data 0.000 (0.002)	Loss 1.1032 (1.3298)	Acc@1 69.531 (67.977)	Acc@5 92.578 (86.819)
+Epoch: [29][2500/5005]	Time 0.593 (0.595)	Data 0.000 (0.002)	Loss 1.5631 (1.3329)	Acc@1 62.891 (67.918)	Acc@5 83.594 (86.800)
+Epoch: [29][3000/5005]	Time 0.591 (0.594)	Data 0.000 (0.002)	Loss 1.3515 (1.3338)	Acc@1 67.969 (67.878)	Acc@5 83.984 (86.787)
+Epoch: [29][3500/5005]	Time 0.596 (0.594)	Data 0.000 (0.002)	Loss 1.3705 (1.3318)	Acc@1 67.578 (67.927)	Acc@5 85.156 (86.814)
+Epoch: [29][4000/5005]	Time 0.592 (0.594)	Data 0.000 (0.001)	Loss 1.3569 (1.3323)	Acc@1 68.359 (67.922)	Acc@5 86.719 (86.806)
+Epoch: [29][4500/5005]	Time 0.598 (0.594)	Data 0.000 (0.001)	Loss 1.3547 (1.3329)	Acc@1 67.188 (67.912)	Acc@5 87.109 (86.804)
+Epoch: [29][5000/5005]	Time 0.597 (0.594)	Data 0.000 (0.001)	Loss 1.2080 (1.3326)	Acc@1 67.578 (67.928)	Acc@5 87.500 (86.793)
+Test: [0/196]	Time 1.562 (1.562)	Loss 0.6497 (0.6497)	Acc@1 83.203 (83.203)	Acc@5 96.484 (96.484)
+ * Acc@1 70.554 Acc@5 89.772

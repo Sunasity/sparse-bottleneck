@@ -1,0 +1,6 @@
+=> creating model 'vgg16'
+=> loading checkpoint 'checkpoints/1547895716/checkpoint.pth.tar'
+=> loaded checkpoint 'checkpoints/1547895716/checkpoint.pth.tar' 
+checkpoint dir:  checkpoints/1548036378/
+weight information for regulizer based pretrain
+[tensor(0.0034, device='cuda:0'), tensor(0.0069, device='cuda:0'), tensor(0.0127, device='cuda:0')] [tensor(7.3621e-06, device='cuda:0'), tensor(2.7623e-05, device='cuda:0'), tensor(9.2842e-05, device='cuda:0')]

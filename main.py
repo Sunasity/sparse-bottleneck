@@ -85,6 +85,18 @@ def read_config(config_file):
         conf_dict[sc[0]] = sc[1]
     return conf_dict
 
+def CheckInformation(model):
+    means = []
+    vars = []
+    with torch.no_grad():
+        for m in model.modules():
+            if isinstance(m, nn.Linear):
+                means.append(torch.mean(torch.abs(m.weight)))
+                vars.append(torch.var(torch.abs(m.weight)))
+    print ('weight information for regulizer based pretrain')
+    print (means, vars)
+                        
+
 def main():
     args = parser.parse_args()
 
@@ -153,16 +165,17 @@ def main_worker(gpu, ngpus_per_node, args):
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
     cudnn.benchmark = True
-
+    
      #--------init pruning-----------------------------------     
     pruning = None
     regulier = None
-    sparse_param = None                                  
+    sparse_param = None                  
+    conf = None
     if args.prune:
         conf = read_config(args.conf)
         if conf['scheme'] == 'naive':
             #for vgg
-            optimizer = torch.optim.SGD([{'params': model.classifier[0].parameters(), 'lr': args.finetune_lr}], 
+            optimizer = torch.optim.SGD([{'params': model.classifier.parameters(), 'lr': args.finetune_lr}], 
                                         0.0,
                                         momentum=args.momentum,
                                         weight_decay=args.weight_decay) 
@@ -172,9 +185,12 @@ def main_worker(gpu, ngpus_per_node, args):
             
             pruning.Init(model)
         elif conf['scheme'] == 'admm':
+            #optimizer = torch.optim.Adam(model.parameters(),
+            #                            args.finetune_lr,
+            #                            weight_decay=args.weight_decay) 
             sparse_param = admm_sparse.ADMMParameter(conf)
             sparse_param.InitParameter(model)
-            regulier = nn.MSELoss(size_average=False)
+            regulier = nn.MSELoss(reduction='sum')
 
     # Data loading code
     traindir = os.path.join(args.data, 'train')
@@ -218,6 +234,7 @@ def main_worker(gpu, ngpus_per_node, args):
     current_time = str(int(time.time()))
     current = 'checkpoints/' + current_time + '/'
     os.mkdir(current)
+    print ('checkpoint dir: ', current)
 
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch, args)
@@ -225,10 +242,12 @@ def main_worker(gpu, ngpus_per_node, args):
         # check wieght dist
         if args.prune:
             if conf['scheme'] == 'admm':
-                print ('print weight distribution information....')
-                weight_dist = sparse_param.CheckDistribution(model)
+                print ('print weight update and distribution information....')
+                weight_dist = sparse_param.CheckInformation(model)
                 for i_, wd in enumerate(weight_dist):
-                    print ('idx: %d, mean: %.4f, var: %4f' % (sparse_param.pruned_idx[i_], wd[0], wd[1])) 
+                    print ('idx: %d, mean: %.4f, var: %.4f, admm loss: %.4f, Z update: %.4f, U update: %.4f' % (sparse_param.pruned_idx[i_], wd[0], wd[1], wd[2], wd[3], wd[4])) 
+
+        CheckInformation(model)
         # train for one epoch 
         sparse_param = train(train_loader, model, criterion, optimizer, epoch, args, conf, sparse_param, pruning, regulier)
         
@@ -247,7 +266,7 @@ def main_worker(gpu, ngpus_per_node, args):
             'best_acc1': best_acc1,
             'optimizer' : optimizer.state_dict(),
         }, is_best, current=current)
-    
+
     
 def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, sparse_param=None, pruning=None, regulier=None):
     batch_time = AverageMeter()
