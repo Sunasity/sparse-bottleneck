@@ -8,6 +8,7 @@ To be added.
 - start command
 ```
 python main.py --arch=vgg16 --pretrained --finetune_lr=1e-3 --lr_decay=30 --prune --conf=conf/vgg.conf
+python main.py --arch=alexnet --pretrained --finetune_lr=1e-3 --lr_decay=30 --prune --conf=conf/admm.conf
 ```
 - conf is used to define the layers to be pruned, expected sparsity and other hyper-parameters for pruning.
 
