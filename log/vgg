@@ -1,0 +1,8 @@
+=> creating model 'vgg16'
+=> loading checkpoint 'checkpoints/vgg-l2-p-1/model_best.pth.tar'
+=> loaded checkpoint 'checkpoints/vgg-l2-p-1/model_best.pth.tar' 
+read conf from:  conf/vgg.conf
+checkpoint dir:  checkpoints/1548990627/
+weight information for regulizer based pretrain
+[tensor(0.0011, device='cuda:0'), tensor(0.0021, device='cuda:0'), tensor(0.0144, device='cuda:0')] [tensor(1.0847e-05, device='cuda:0'), tensor(4.2583e-05, device='cuda:0'), tensor(0.0001, device='cuda:0')]
+Epoch: [0][0/5005]	Time 13.101 (13.101)	Data 2.290 (2.290)	Loss 1.3997 (1.3997)	Acc@1 66.406 (66.406)	Acc@5 84.766 (84.766)

@@ -165,8 +165,7 @@ def main_worker(gpu, ngpus_per_node, args):
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
     cudnn.benchmark = True
-    
-     #--------init pruning-----------------------------------     
+    #--------init pruning-----------------------------------     
     pruning = None
     regulier = None
     sparse_param = None                  
@@ -175,7 +174,10 @@ def main_worker(gpu, ngpus_per_node, args):
         conf = read_config(args.conf)
         if conf['scheme'] == 'naive':
             #for vgg
-            optimizer = torch.optim.SGD([{'params': model.classifier.parameters(), 'lr': args.finetune_lr}], 
+            optimizer = torch.optim.SGD([{'params': model.classifier[0].parameters(), 'lr': args.finetune_lr},
+                                         {'params': model.classifier[1].parameters(), 'lr': args.finetune_lr},
+                                         {'params': model.classifier[2].parameters(), 'lr': args.finetune_lr},
+                                         {'params': model.classifier[3].parameters(), 'lr': args.finetune_lr}],
                                         0.0,
                                         momentum=args.momentum,
                                         weight_decay=args.weight_decay) 
@@ -266,7 +268,6 @@ def main_worker(gpu, ngpus_per_node, args):
             'best_acc1': best_acc1,
             'optimizer' : optimizer.state_dict(),
         }, is_best, current=current)
-
     
 def train(train_loader, model, criterion, optimizer, epoch, args, conf=None, sparse_param=None, pruning=None, regulier=None):
     batch_time = AverageMeter()
